@@ -17,7 +17,6 @@ import javax.persistence.EntityListeners;
 public class Post extends AbstractEntity {
 
 
-
     @Column(nullable = false, columnDefinition = "text")
     private String  title;
 
@@ -26,4 +25,5 @@ public class Post extends AbstractEntity {
 
     @Column(nullable = false, columnDefinition = "text")
     private String  url;
+
 }

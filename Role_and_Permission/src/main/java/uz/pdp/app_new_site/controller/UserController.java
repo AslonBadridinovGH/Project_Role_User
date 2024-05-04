@@ -27,7 +27,6 @@ public class UserController {
     UserRepository userRepository;
 
 
-
     // @PreAuthorize(value = "hasAuthority('ADD_USER')")
     @CheckPermission(permission = "ADD_USER")
     @PostMapping("/addUser")

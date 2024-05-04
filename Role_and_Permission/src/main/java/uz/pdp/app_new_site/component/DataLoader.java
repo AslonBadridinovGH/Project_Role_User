@@ -44,6 +44,7 @@ public class DataLoader implements CommandLineRunner {
         userRepository.save(new User("User", "user", passwordEncoder.encode("user123"), user, true));
 
        }
+
     }
 
 

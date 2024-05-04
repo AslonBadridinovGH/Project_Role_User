@@ -12,6 +12,6 @@ import uz.pdp.app_new_site.entity.User;
 public class WrittenByUserConfig {
       @Bean
       AuditorAware<User>auditorAware(){
-      return new WrittenByUser();
+       return new WrittenByUser();
    }
 }

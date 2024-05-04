@@ -51,7 +51,6 @@ public class UserService {
         user.setUsername( userDto.getUserName());
         user.setPassword( passwordEncoder.encode(userDto.getPassword()));
 
-
         user.setRole(roleRepository.findById(userDto.getRoleId()).orElseThrow(
                         () -> new ResourceNotFoundException("role ", "with Id ", userDto.getRoleId()+" not found")));
         user.setEnabled(true);

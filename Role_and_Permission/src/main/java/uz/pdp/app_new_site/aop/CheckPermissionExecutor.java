@@ -9,7 +9,6 @@ import uz.pdp.app_new_site.entity.User;
 import uz.pdp.app_new_site.exceptions.ForbiddenException;
 
 
-
 @Component
 @Aspect
 public class CheckPermissionExecutor {
@@ -19,10 +18,10 @@ public class CheckPermissionExecutor {
     {
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        boolean exist=false;
+        boolean exist = false;
 
-      //  Stream<? extends GrantedAuthority>  stream =
-      //  user.getAuthorities().stream().filter( grantedAuthority -> grantedAuthority.equals(checkPermission.permission()) );
+        //  Stream<? extends GrantedAuthority>  stream =
+        //  user.getAuthorities().stream().filter( grantedAuthority -> grantedAuthority.equals(checkPermission.permission()) );
 
         for (GrantedAuthority authority : user.getAuthorities())
         {

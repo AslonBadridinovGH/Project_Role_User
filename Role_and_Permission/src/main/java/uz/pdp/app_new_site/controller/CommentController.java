@@ -21,8 +21,6 @@ public class CommentController {
     CommentService commentService;
 
 
-
-
     // @PreAuthorize(value = "hasAuthority('ADD_COMMENT')")
     @CheckPermission(permission = "ADD_COMMENT")
     @PostMapping

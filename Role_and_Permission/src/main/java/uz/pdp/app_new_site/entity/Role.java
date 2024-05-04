@@ -15,15 +15,16 @@ import java.util.List;
 @Entity
 public class Role extends AbstractEntity {
 
+
       @Column(unique = true, nullable = false)
       private String name;
 
+      @Enumerated(value = EnumType.STRING)
+      @ElementCollection(fetch = FetchType.LAZY)
+      private List<Permission> permissionList;
 
-     @Enumerated(value = EnumType.STRING)
-     @ElementCollection(fetch = FetchType.LAZY)
-     private List<Permission> permissionList;
+      @Column(length=600)   //  columnDefinition = "text"
+      private String description;
 
-     @Column(length=600)   //  columnDefinition = "text"
-     private String description;
 
 }
